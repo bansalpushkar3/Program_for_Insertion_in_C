@@ -1,0 +1,52 @@
+// If we want to insert an item in sorted order:
+
+#include<iostream>
+#include<conio.h>
+#include<process.h>
+using namespace std;
+
+int main()
+{
+	int Capacity,A[20],B,C,Loc,i;
+	cout<<"Plese Enter Array Size: ";
+	cin>>Capacity;
+	cout<<"Request to Enter Array Element :  ";
+	
+	
+	for(i=0;i<Capacity;++i)
+	{
+		
+		cin>>A[i];
+		
+	}
+	
+	cout<<"Enter Items :";
+	cin>>B;
+	cout<<"Enter Location of the value entering: ";
+	cin>>Loc;
+	
+	if(Capacity==20)
+	{
+	
+		cout<<"Array is showing overflow effect";
+		exit(1);
+		
+	}
+	
+	
+	for (i=Capacity-1;i>=Loc;i--)
+	{
+		A[i+1]=A[i];
+		
+		
+	}
+	A[Loc]=B;
+	Capacity=Capacity+1;
+	for( i=0;i<Capacity;++i)
+	{
+		
+		cout<<A[i]<<" ";
+		
+		
+	}
+}
